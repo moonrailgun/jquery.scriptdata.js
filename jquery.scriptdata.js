@@ -2,7 +2,7 @@
 (function($) {
   $.extend({
     script: {
-      parseQueryString(qs) {
+      parseQueryString: function(qs) {
         var result = {};
         var temp = qs.split('&');
         for (var i = 0; i < temp.length; i++) {
