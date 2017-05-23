@@ -64,3 +64,12 @@ console.log($.script.getData());
 // =>{{"a":a}: undefined}
 ```
 **be sure input is a valid json string!**
+
+## Use in `$(function(){…});`
+
+If you want use struct like `$(function(){…});` to warp your js logic.I think we have not a good solution now because the nested logic is run when all script have been load.
+
+If have own one script need param.Please put it at the lastest script tag.
+If have two or more script. Try to set a globar var in js file, outside of `$(function(){…});` struct.
+
+I will try to fix it in next version.
