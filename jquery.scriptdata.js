@@ -18,6 +18,9 @@
           attrName = 'data'
         }
         var attr = $(currentScript).attr(attrName);
+        if(!attr) {
+          return;
+        }
         var obj;
         try {
           obj = JSON.parse(attr);
