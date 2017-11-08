@@ -17,6 +17,10 @@
         if (!attrName) {
           attrName = 'data'
         }
+        if($(currentScript).attr(attrName) === undefined) {
+          currentScript = $('script['+attrName+']').last();
+        }
+
         var attr = $(currentScript).attr(attrName);
         if(!attr) {
           return;
